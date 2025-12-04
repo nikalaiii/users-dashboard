@@ -1,0 +1,124 @@
+🚀 User Management Fullstack App
+
+A fullstack user management application built as a technical assignment.
+
+This project includes:
+
+Backend: NestJS, TypeORM, PostgreSQL, Zod
+
+Frontend: Next.js, React Query, Context API, TailwindCSS, ShadCN/UI
+
+Docker Compose for local containerized development
+
+📦 Tech Stack
+Backend
+
+NestJS
+
+PostgreSQL
+
+TypeORM
+
+Zod
+
+Docker
+
+Frontend
+
+Next.js
+
+React Query
+
+Context API
+
+TailwindCSS
+
+ShadCN/UI
+
+Axios
+
+🔧 Installation & Setup
+1️⃣ Clone the repository
+git clone <repo-url>
+cd test-mono
+
+🐋 Docker Setup (recommended)
+2️⃣ Build containers
+docker compose build
+
+3️⃣ Start all services
+docker compose up -d
+
+4️⃣ Services will be available at:
+Service	URL
+Frontend	http://localhost:3000
+
+Backend API	http://localhost:4000
+
+PostgreSQL DB	localhost:5432
+▶️ Local Development (without Docker)
+Backend (NestJS)
+cd server
+npm install
+npm run start:dev
+
+Frontend (Next.js)
+cd client
+npm install
+npm run dev
+
+📌 Features
+✅ Backend API
+
+GET /users – fetch all users
+
+supports ?search=<value> (filters by name or email)
+
+POST /users – create a new user
+
+DELETE /users/:id – delete a user
+
+Database seeding
+
+on startup, if the DB is empty, 10 sample users are inserted
+
+Validation via Zod
+
+✅ Frontend Dashboard
+
+Users table with live updates
+
+Search bar (server-side filtering)
+
+Create User form
+
+Delete User button
+
+React Query for fetching + automatic synchronization
+
+Context API as global state management
+
+Clean UI built with ShadCN/UI + TailwindCSS
+
+📁 Project Structure
+test-mono/
+│── client/               # Next.js frontend
+│── server/               # NestJS backend
+│── docker-compose.yml
+│── README.md
+
+🔍 Testing the API
+curl http://localhost:4000/users
+
+
+OR open in browser:
+
+http://localhost:4000/users
+
+🧪 Additional Notes
+
+PostgreSQL data is persisted in a Docker volume (pgdata)
+
+Both frontend and backend are fully typed with TypeScript
+
+The app runs in separate containers for cleaner development workflow
