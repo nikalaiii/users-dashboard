@@ -13,7 +13,6 @@ export function useUsers(search: string) {
     queryFn: () => getUsers(search || undefined),
   });
 
-  // синхронізуємо React Query -> Context
   useEffect(() => {
     if (query.data) {
       setUsers(query.data);
